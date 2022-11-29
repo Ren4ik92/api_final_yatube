@@ -18,7 +18,8 @@ except NameError:
                          " {'__file__': this_file}))")
 
 bin_dir = os.path.dirname(abs_file)
-base = bin_dir[: -len("bin") - 1]  # strip away the bin part from the __file__, plus the path separator
+base = bin_dir[: -len("bin") - 1]
+# strip away the bin part from the __file__, plus the path separator
 
 # prepend bin to PATH (this file is inside the bin directory)
 os.environ["PATH"] = os.pathsep.join(
